@@ -217,7 +217,7 @@ Zwischen die Endsysteme kommt einmal das Transitsystem:
 - Entwickelte Protokolle (z.B TCP/IP) sind heute auch in nahezu allen Netzwerken implementiert (hoher Verbreitungsgrad)
 - Für Unternehmen ist es unverzichtbar, sich einen Schutzwall vom Unternehmensnetzwerk zum Internet aufzubauen. Dieser Schutzwall ist in erster Linie die Firewall.
 
-### TCP/IP vs. ISO/OSI
+#### TCP/IP vs. ISO/OSI
 | |ISO/OSI | | | |TCP/IP |
 |---|--- |--- |--- |--- |--- |
 |Layer |Name            | | | |Name |
@@ -228,3 +228,21 @@ Zwischen die Endsysteme kommt einmal das Transitsystem:
 |3 | Network Layer      | | | |Internet |
 |2 | Data Link Layer    | | | |Host-To-Network |
 |1 | Physical Layer     | | | |Host-To-Network |
+
+#### Hybrides Modell
+|Layer |Name |
+|---|---|
+|5 | Application Layer|
+|4 | Transport Layer |
+|3 | Network Layer |
+|2 | Data Link Layer |
+|1 | Physical Layer |
+
+#### Schichten des Internets
+
+| | | |
+|--- |--- |--- |
+|Anwendung |Application |Telnet, FTP, HTTP, SMTP |
+|Transport |Transport |TCP, UDP |
+|Vermittlung |Network |Internet Protokol (IP), ICMP (Internet Control Message Protocol), IGMP (Internet Group Management Protocol) |
+|Verbindung |Host-To-Network |Lan (Ethernet, Token-Ring, etc) |
