@@ -219,7 +219,7 @@ Zwischen die Endsysteme kommt einmal das Transitsystem:
 
 ### TCP/IP vs. ISO/OSI
 
-|   |ISO/OSI            | | | |TCP/IP |
+|Nr   |ISO/OSI          | | | |TCP/IP |
 |Layer |Name            | | | |Name |
 |---|--- |--- |--- |--- |--- |
 |7 | Application Layer  | | | |Application |
