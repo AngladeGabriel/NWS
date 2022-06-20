@@ -84,7 +84,7 @@ Arten von Bedrohungen:
   - Sicherheitsrichtlinie-> Sicherheitsstrategie-> Umsetzungsvorgaben
   - Betreiber eines Systems legt im Detail fest, welche Schutzziele erreicht werden sollen
 
-##### Schutzziele - Übersicht
+#### Schutzziele - Übersicht
 |   |IT-Security|||
 |---|---|---|---|
 |Confidentiality</br>Vertraulichkeit |Integrity</br>Integrität |Availability</br>Verfügbarkeit |Liability</br>Verbindlichkeit |
@@ -92,6 +92,39 @@ Arten von Bedrohungen:
 |                                    | \>Genauigkeit           |\>Zuverlässigkeit              |\>Beherrschbarkeit            |
 |                                    | \>Korrektheit           |\>Robustheit                   |\>Revisionsfähigkeit          |
 |                                    | \>Vollständigkeit       |\>Wiederherstellbarkeit        |                              |
+
+
+#### Sicherheitsmaßnahmen
+|```Organisatorische Maßnahmen```  |Schulungen        |Auswertung von Log-Files    |Security Incident Response Prozess                      | 
+|```Technische Maßnahmen```        |Firewalls         |Intrusion Detection Systeme |Automatisierte Rekonfguration und technische Maßnahmen  | 
+|                                  |```Prevention```  |```Detection```             |```Response```                                          | 
+
+Killchain mit Prevention, Detection, Response Einordnung:
+![killchain pdr](./images/killchain_PDR.png)
+
+##### Authentisierung
+- Unterschieden wird zwischen:
+  1. Authentisierung des Datenursprungs
+  2. Benutzer-Authentisierung
+  3. Peer Entity Authentisierung
+     -  Einseitig (z.B Client prüft Server, aber nicht umgekehrt)
+     -  Zwie- bzw mehrseitige Authentisierung
+- Grundsätzliche Möglichkeiten zur Authentisierung:
+  1. Wissen (Something you know)
+  2. Besitz (Something you have)
+  3. Persönliche Eigenschaften (Something you are)
+  4. Kombination aus 1-3
+  5. Delegation - Someone who knows you
+
+| Wissen | Besitz | Eigenschaft |
+|--- |--- |--- |---
+|Passwort | Smartcard | Fingerabdruck|
+| Passphrase | Token Schlüssel (physisch), Token-App auf Smartphone | Stimmerkennung|
+|Einmal-Passwort| Kryptographischer Schlüssel als Datei |Gesichtserkennung |
+|PIN||Iris-Scan|
+|||Hand-Geometrie, Venenbild|
+| | | Behavioral Biometrics (Anschlags oder Andruck-Charakteristik beim Schreiben, Lippenbewegungen)|
+
 
 ### Rahmenbedingungen und Standards
 
@@ -138,3 +171,17 @@ Inhalt:
 - Durch Identifizierung von nicht/teilweise umgesetzten Maßnahmen werden Verbesserungsmöglichkeiten aufgezeigt
 - Der Basis-Sicherheitscheck gibt Auskunft über fehlende Maßnahmen (Soll/Ist-Abgleich)
 - Duch Basis-Sicherheitscheck werden nur Grundschutz-Maßnahmen geprüft - Niveau genügt nur bei niedrigen bis mittleren Schutzbedarf 
+
+
+### Grundlagen 2
+
+#### ISO/OSI - 7 Schichten Modell
+**A** **P**ussy **S**o **T**ight **N**o **D**ick **P**enetrates
+
+|7 | Application Layer|
+|6 | Presentation Layer|
+|5 | Session Layer |
+|4 | Transport Layer |
+|3 | Network Layer |
+|2 | Data Link Layer |
+|1 | Physical Layer |
