@@ -209,7 +209,7 @@ Zwischen die Endsysteme kommt einmal das Transitsystem:
 
 ```Physical Layer```
 
-##### Historie
+#### Historie
 - Entwickelte Protokolle zielen auf verlustfreie, nicht sichere Übertragung des Datenpakete ab
 - Sofern keine zusätzlichen Programme/Protokolle verwendet werden Daten auch heute noch unverschlüsselt übertragen
 
@@ -246,3 +246,13 @@ Zwischen die Endsysteme kommt einmal das Transitsystem:
 |Transport |Transport |TCP, UDP |
 |Vermittlung |Network |Internet Protokol (IP), ICMP (Internet Control Message Protocol), IGMP (Internet Group Management Protocol) |
 |Verbindung |Host-To-Network |Lan (Ethernet, Token-Ring, etc) |
+
+#### Data-Link-Layer
+
+**Ethernet Pakete**
+- Beispiel: ```00:10:B5:5E:D9:A6```
+- Jede Netzwerkschnittstelle hat eindeutige Nummer (```Media Access Contol```, MAC-Adresse)
+- Pakete sind mit zusätzlicher Prüfsumme versehen
+- Kaputte Pakete werden nicht repariert sondern ignoriert (bzw. neu angefordert)
+
+![Datalink-Pakete ](./images/datalink-layer.png)
