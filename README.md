@@ -187,3 +187,45 @@ Inhalt:
 |3 | Network Layer |
 |2 | Data Link Layer |
 |1 | Physical Layer |
+
+
+Ablauf Anwendung / ISO/OSI in der Praxis
+- Ein Absender schreibt eine E-Mail
+- Dieses große Datenpaket wird in der Transportschicht in kleinere Datenpakete zerlegt
+- In der Netzwerkschicht erhalten die Datenpakete weitere Informationen bspw. über welches Protokoll die Daten versendet werden sollen
+- In den letzten beiden Schichten erhalten die Pakete die letzten Informationen für die Übertragung/die Übertragungswege
+- Die Pakete werden abgeschickt
+- Und werden entsprechend der enthaltenen Informationen wieder zusammengesetzt
+
+![ISO/OSI](./images/iososi.png)
+
+Sonderfall:
+**Datentransport über Netzgrenzen**
+
+Zwischen die Endsysteme kommt einmal das Transitsystem:
+```Network Layer```
+
+```Data Link Layer```
+
+```Physical Layer```
+
+##### Historie
+- Entwickelte Protokolle zielen auf verlustfreie, nicht sichere Übertragung des Datenpakete ab
+- Sofern keine zusätzlichen Programme/Protokolle verwendet werden Daten auch heute noch unverschlüsselt übertragen
+
+
+- Entwickelte Protokolle (z.B TCP/IP) sind heute auch in nahezu allen Netzwerken implementiert (hoher Verbreitungsgrad)
+- Für Unternehmen ist es unverzichtbar, sich einen Schutzwall vom Unternehmensnetzwerk zum Internet aufzubauen. Dieser Schutzwall ist in erster Linie die Firewall.
+
+### TCP/IP vs. ISO/OSI
+
+|ISO/OSI | | | ||TCP/IP |
+|Layer |Name | | ||Name |
+|---|---|--- |--- ||--- |
+|7 | Application Layer|| ||Application |
+|6 | Presentation Layer|| || |
+|5 | Session Layer || || |
+|4 | Transport Layer || ||Transport |
+|3 | Network Layer || ||Internet |
+|2 | Data Link Layer || ||Host-To-Network |
+|1 | Physical Layer || ||Host-To-Network |
