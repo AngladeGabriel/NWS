@@ -178,6 +178,8 @@ Inhalt:
 #### ISO/OSI - 7 Schichten Modell
 **A** **P**ussy **S**o **T**ight **N**o **D**ick **P**enetrates
 
+|Layer |Name |
+|---|---|
 |7 | Application Layer|
 |6 | Presentation Layer|
 |5 | Session Layer |
