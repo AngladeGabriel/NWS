@@ -218,10 +218,9 @@ Zwischen die Endsysteme kommt einmal das Transitsystem:
 - Für Unternehmen ist es unverzichtbar, sich einen Schutzwall vom Unternehmensnetzwerk zum Internet aufzubauen. Dieser Schutzwall ist in erster Linie die Firewall.
 
 ### TCP/IP vs. ISO/OSI
-
-|Nr   |ISO/OSI          | | | |TCP/IP |
-|Layer |Name            | | | |Name |
+| |ISO/OSI | | | |TCP/IP |
 |---|--- |--- |--- |--- |--- |
+|Layer |Name            | | | |Name |
 |7 | Application Layer  | | | |Application |
 |6 | Presentation Layer | | | | |
 |5 | Session Layer      | | | | |
