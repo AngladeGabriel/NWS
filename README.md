@@ -60,7 +60,38 @@ Arten von Bedrohungen:
   - Sicherstellen, das nut autorisierte Personen/Systeme Zugriff auf Ressourcen erlangen
 
 
+#### Sicherheitsmechanismen
+- Authentisierung (Authentication)
+  - Identität von Akteuren wird sichergestellt
+- Zugriffsschutz (Access protection/control)
+  - Zugriffsversuche werden überwacht
+- Verschlüsselung (Encryption)
+  - Daten werden verschlüsselt
+- Protokollierung (Auditing)
+  - Sicherheitsrelevante Vorgänge im System werden protokolliert
+- Einbruchsentdeckung (Intrusion detection)
+  - Überwachung von Versuchen, Sicherheitsmaßnahmen zu umgehen
+- Informationsflusskontrolle (Information flow control)
+  - Überwachung des Informationsflusses zwischen Instanzen
+- Verbergen (Steganography)
+  - Daten werden durch das Einbetten in andere Daten unsichtbar
+- Interferenzkontrolle (Interference control)
+  - Schutz vor dem Ableiten von Daten von unberechtigten Parteien
+- Sicherheitsanforderungen (Security Requirements)
+  - Auftraggeber/Entwickler eines Systems legen fest, welche Schutzziele erreichbar sein sollen
+  - Bei hohen Anforderungen kommen formale Sicherheitsmodelle zum Einsatz
+- Sicherheitsrichtlinie (Security policy)
+  - Sicherheitsrichtlinie-> Sicherheitsstrategie-> Umsetzungsvorgaben
+  - Betreiber eines Systems legt im Detail fest, welche Schutzziele erreicht werden sollen
 
+##### Schutzziele - Übersicht
+|   |IT-Security|||
+|---|---|---|---|
+|Confidentiality</br>Vertraulichkeit |Integrity</br>Integrität |Availability</br>Verfügbarkeit |Liability</br>Verbindlichkeit |
+|                                    | \>Übereinstimmung       |\>Fehlertoleranz               |\>Authentizität               |
+|                                    | \>Genauigkeit           |\>Zuverlässigkeit              |\>Beherrschbarkeit            |
+|                                    | \>Korrektheit           |\>Robustheit                   |\>Revisionsfähigkeit          |
+|                                    | \>Vollständigkeit       |\>Wiederherstellbarkeit        |                              |
 
 ### Rahmenbedingungen und Standards
 
