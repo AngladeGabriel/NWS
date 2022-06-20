@@ -219,13 +219,13 @@ Zwischen die Endsysteme kommt einmal das Transitsystem:
 
 ### TCP/IP vs. ISO/OSI
 
-|ISO/OSI | | | ||TCP/IP |
-|Layer |Name | | ||Name |
-|---|---|--- |--- ||--- |
-|7 | Application Layer|| ||Application |
-|6 | Presentation Layer|| || |
-|5 | Session Layer || || |
-|4 | Transport Layer || ||Transport |
-|3 | Network Layer || ||Internet |
-|2 | Data Link Layer || ||Host-To-Network |
-|1 | Physical Layer || ||Host-To-Network |
+|   |ISO/OSI            | | | |TCP/IP |
+|Layer |Name            | | | |Name |
+|---|--- |--- |--- |--- |--- |
+|7 | Application Layer  | | | |Application |
+|6 | Presentation Layer | | | | |
+|5 | Session Layer      | | | | |
+|4 | Transport Layer    | | | |Transport |
+|3 | Network Layer      | | | |Internet |
+|2 | Data Link Layer    | | | |Host-To-Network |
+|1 | Physical Layer     | | | |Host-To-Network |
