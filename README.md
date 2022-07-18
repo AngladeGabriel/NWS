@@ -209,14 +209,18 @@ Wo werden Hex- statt Dezimalzahlen verwendet: IPv6
 
 **TCP Verbindungsaufbau**
 3-Way-Hanshake
-<details>
-Alice										Bob
-SYN-Sent		SYN ->			
-					<- SYN, ACK		SYN-RECEIVED
-ESTABL.			ACK ->			ESTABLISHED
-					ACK, Daten ->
-						<- ACK
-</details>
+|Alice | | | Bob|
+|---|---|---|---|---|
+|SYN-Sent |SYN -> | | |	
+| | |<- SYN, ACK | SYN-RECEIVED|	
+|ESTABL. |ACK -> | |	 ESTABLISHED|
+| |ACK, Daten -> | |	 |
+| | |<- ACK |	 |					
+							
+						
+					
+						
+
 ![Folien verlinkung zu FTP](ftp://ftp.isi.edu/in-notes/rfc793.txt)
 
 # Data Link Layer
