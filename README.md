@@ -243,7 +243,6 @@ Grundidee:
 
 **Layer 2**
 Umsetzungen
-<details>
 - *VLAN*	Virtual LAN
 	- Mehere LAN Broadcast Domains über den selben physischen Link
 	- Standard VLAN Tagging
@@ -252,10 +251,9 @@ Umsetzungen
 - Point-to-Point Verbindungen
 - Layer2 Tunneling
 - ...
-</details>
 
 Aufgaben
-<details>
+
 - Fehlerfreie Übertragung von Frames
 	- Aufteilung von Bitströmen in Frames
 	- Fehlerkorrektur über Prüfsummen (e.g. CRC Cyclic Redundancy Check)
@@ -263,7 +261,7 @@ Aufgaben
 - Medienzugriffsverfahren für gemeinsam genutztes Übergangsmedium
 	- CSMA/CD bei Ethernet
 	- CSMA/CA bei WLAN
-</details>
+
 
 *VLAN*
 - LAN Infrastruktur über mehrere Switches (Gebäude) hinweg
