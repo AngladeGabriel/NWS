@@ -197,8 +197,9 @@ Link
 - Jeder Zahlenblock ist 8 Bit groß -> enthält Wert zwischen 0 - 255
 
 <details>
-Bereiche/Klassen:
+Bereiche/Klassen:  
 |name	|		erste addr	|	letzte addr	|	Menge|
+|---|---|---|---|
 |Klasse A |	10.0.0.0 |	 10.255.255.255 |	256x256x256|
 |Klasse B |	10.10.0.0 |	 10.10.255.255		|	256x256|
 |Klasse C |	10.10.10.0	|10.10.10.255 	|	256|
