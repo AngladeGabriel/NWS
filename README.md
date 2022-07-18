@@ -4,7 +4,7 @@
 **Bedrohungslage**
 **Killchain/Attack Life Cycle**
 ![Ablauf](/img/killchain.png)
-![Ablauf](img/dns-rr.png)
+
 Steps											Examples
 - initial Recon						
 - initial Compromise			
@@ -43,7 +43,7 @@ Ablauf:
 	- jede relevante Maßnahme hat Umsetzungsstatus: entbehrlich/ja/teilweise/nein 
 
 ## Schutzziele
-![Übersicht]("./img/schutzziele.png")
+![Übersicht](img/schutzziele.png)
 
 Definieren Anforderungen:
 CIA 
@@ -347,7 +347,7 @@ DNS befindet sich im OSI in Layer 5 (Application)
 	- Domain-Name ist absoluter Pfad in Baum
 	- Domain eines Teilbaum unterhalb des Knoten mit entsprechenden Domain-Namen
 
-![dns baum]("./img/dns-baum.png")
+![dns baum](img/dns-baum.png)
 
 ## Delegation und Zonen
 DNS Datenbank ist so groß, dass sie nicht zentral administriert werden kann
@@ -355,14 +355,14 @@ DNS Datenbank ist so groß, dass sie nicht zentral administriert werden kann
 - DNS-Namensraum in Zonen aufgeteilt
 - Zonen können Domains oder Teile von Domains sein
 - Bsp.: Zone _de_ deleigert Verantwortung für _Domain_ rz.hs-mannheim.de an das Rechnenzentrum der hs-mannheim, diese delegiert rz.hs-mannheim weiter an RZ.
-![dns delegation]("img/dns-baum.png")
+![dns delegation](img/dns-baum.png)
 
 **Resource Records**
 Start of Authority (SOA) Record mit:
 - Zonen-Name
 - authoritativem Name-Server 
 - und E-Mail Adresse
-![ressource records]("img/dns-rr.png")
+![ressource records](img/dns-rr.png)
 
 **Record-Typen**
 - SOA			Start of Authority 
@@ -587,7 +587,7 @@ Beispiele
 - skaliert nicht: unübersichtlich, keine Delegation
 
 Nutzerverzeichnis ist in Form eines Baums
-![ldap bsp baum]("ldab-tree.png")
+![ldap bsp baum](ldab-tree.png)
 
 - LDAP ist ein Protokoll zur Abfrage von Daten eines Verzeichnisdienstes
 - Aktuelle Version LDAPv3 ist in RFCs 4510 bis 4519 definiert
@@ -638,7 +638,7 @@ Domäne
 - abgeschlossenes Verzeichnis von Objekten
 - tree besteht aus Organisationseinheit (OU) und Objekten
 - Domäne hat einen Domain Name
-![ad-domaene]("./img/ad-domaene.png")
+![ad-domaene](img/ad-domaene.png)
 </details>
 
 Orga. Einheit OU
@@ -711,11 +711,11 @@ Inahlte des Attribut und Werte des Feldes:
 			- Length
 			- Value (je nach Attribut Nummer)
 	
-![avp]("./img/radius-avp.png")
+![avp](img/radius-avp.png)
 
 **Grundlegende Funktion**
 
-![grundlegende Funktion]("./img/radius-grund-funktiom.png")
+![grundlegende Funktion](img/radius-grund-funktiom.png)
 
 **Sicherheit**
 - Historisches Protokoll das heute immernoch Anwendung findet
@@ -867,10 +867,10 @@ Root:
 - Webserver verwenden Zertifikate um sich gegenüber dem Anwender auszuweisen
 - Clients müssen sich mit einem Zertifikat gegenüber ienem Webserver ausweisen
 - IP Stack mit SSL/TLS
-![ip stack]("./img/ssl-ipstack.png") 
+![ip stack](img/ssl-ipstack.png) 
 
 - SSL/TLS Handshake
-![handshake]("./img/ssl-handshake.png") 
+![handshake](img/ssl-handshake.png) 
 
 **Takeaway**
 - kryptografische verfahren werden benutzt um Informationen vertraulich und damit geschützt zu übertragen
@@ -959,7 +959,7 @@ Bsp. SMTP-Verkehr eingehend:
 - Richtung: OUT <-
 - Zielport: > 1023
 
-![eingehender und ausgehender SMTP-Verkehr]("./img/fw-policy-smtp.png")
+![eingehender und ausgehender SMTP-Verkehr](img/fw-policy-smtp.png)
 
 - Vorteile
 	- durch paketfilter kann man sehr einfach selektiv bestimmte dienste, Rechner oder ganze Teilnetze freischalten
@@ -1233,7 +1233,7 @@ Explicit
 - client bekommt Konfigurationsinformation
 	- diese weist browser an Anfragen an den Proxy zu stellen
 	- NAmensauflösung und routing basieren auf den Umgebungsbedingungen des proxy servers
-![explicit proxy]("./img/proxy-explicit.png")
+![explicit proxy](img/proxy-explicit.png)
 
 Direct (Transparent)
 - Client bzw. Browser stellt anfragen direkt
@@ -1354,13 +1354,13 @@ Technologien:
 	- ip wird in ip eingebettet
 
 Beispiel:
-![side2side]("./img/proxy-side-to-side.png")
+![side2side](img/proxy-side-to-side.png)
 
 ISDN | PPP | IP-Hdr | UDP | L2TP | PPP | IP-Hdr | Data |
 |					Träger					|		Tunnel	 | 	Passagier		 |
 
 
-![side2side]("./img/proxy-side-to-side2.png")
+![side2side](img/proxy-side-to-side2.png)
 
 **AH and ESP**
 - AH auth header 
@@ -1500,7 +1500,7 @@ Mail
 **Gegenmaßnahmen**
 SPF Sender Policy Framework
 	- mittels SPF kann ein Empfänger anhand der Absender IP-Adresse und der Absenderdomain prüfen, ob eine E-Mail vom vorgesehenen, also für eine Domain zuständigen Mailserver versendet wurde
-![srf]("./img/srf.img")
+![srf](img/srf.img)
 
 - jeder srf record beginnt mit einer versionsnr
 - es folgen beliebig viele ausdrücke, die in der Reihenfolge von vorne nach hinten ausgewertet werden
@@ -1514,7 +1514,7 @@ SPF Sender Policy Framework
 
 DMARC Domain-based Message Authentication Reporting and Conformance
 - mit DMARClegt eine Senderdomain unter anderem fest, wie der Empfänger zu verfahren hat, wenn er E-Mails erhält, die bei SPF- und DKIM-Prüfungen durchfällt
-![srf]("./img/dmarc.img")
+![srf](img/dmarc.img)
 
 - DMARC ist keine zusätzliche Technik sondern ein Regelwerk zum Umgang mit SPF- und DKIM-Informationen
 - Richtlinien legen fest wie bei Verstößen gegen SPF- und DKIM-Regeln zu verfahren ist und ob/wie berichtet wird
@@ -1615,10 +1615,10 @@ Emails stellen auch heute das risiko #1 für angriffe dar wesewegen es strukture
 
 __Misc__
 ### Icons
-![hub]("./img/hub.png")
-![switch]("./img/switch.png")
-![layer3-switch.png]("./img/layer3-switch.png.png")
-![fw]("./img/fw.png")
+![hub](img/hub.png)
+![switch](img/switch.png)
+![layer3-switch.png](img/layer3-switch.png.png)
+![fw](img/fw.png)
 
 seite	lampen inhalt
 66		cia - confidentiality, integrity, availability
