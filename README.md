@@ -3,7 +3,7 @@
 # Grundlagen II
 **Bedrohungslage**
 **Killchain/Attack Life Cycle**
-![Ablauf]("/img/killchain.png")
+![Ablauf]("AngladeGabriel/NWS/img/killchain.png")
 
 Steps											Examples
 - initial Recon						
