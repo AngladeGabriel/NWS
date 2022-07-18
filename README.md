@@ -4,7 +4,7 @@
 **Bedrohungslage**
 **Killchain/Attack Life Cycle**
 ![Ablauf]("/img/killchain.png")
-[Ablauf](img/dns-rr.png)
+![Ablauf](img/dns-rr.png)
 Steps											Examples
 - initial Recon						
 - initial Compromise			
