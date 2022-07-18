@@ -494,7 +494,7 @@ Lösung Hidden Primary:
 	- DNS Software aktuell halten
 	- nach Unregelmäßigkeiten auf DNS-Server suchen
 		- zB. Vergleich DNS-Anfragen udn Antworten auf den Hidden-Prim. und den beiden externen DNS-Server
-
+</details>
 **View**
 <details>
 - idR. möchte man nicht in jedem IT-System, dass auf den gesamten, internen Namensraum zugreifen darf
