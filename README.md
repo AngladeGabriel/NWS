@@ -291,8 +291,7 @@ Standard zur Authentifizierung in Rechnernetzen
 # DHCP
 Ist in OSI auf Layer 5 (Application)
 
-Nutzen/Verwendung:
-<details>
+### Nutzen/Verwendung:
 - ermöglicht automatische Netzwerkkonfiguration eines Clients durch Server
 - Zuordnung IP-Addr erfolgt über MAC-Adresse Netzwerkkarte
 	- mobile Clients haben idR. 2: LAN und WLAN
@@ -309,19 +308,19 @@ Nutzen/Verwendung:
 - ermöglicht automatische Netzwerkkonfiguration eines Clients durch Server
 	- WINS-Server (für Windows Clients)
 	- Proxy-Konfiguration via WPAD
-</details>
 
-Architektur
-<details>
+
+### Architektur
+
 - Layer 2 Segment darf nur einen aktiven DHCP Server haben der Anfragen beantwortet
 - redundanz ist heikles Thema
 	- replikation der Lease Informationen zwischen primärem (aktiv) und sekundärem Server
 	- Failover Mechanismus mit dem risiko eines 'Split Brain'
 - **DHCP Realy Funktion** beseitigt Problem in jedem Layer 2 Netz dedizierten DHCP Server zu haben. Bietet die Möglichkeit über Netzgrenzen hinweg (broadcast) DHCP nutzen zu können
-</details>
 
-Angriffe
-<details>
+
+### Angriffe
+
 **Starvation Attack**
 - Angreifer führt eine Menge DHCP-Requests durch bis Server keine neuen/freien IP-Adressen verfügbar hat
 - DOS-Angriff um System lahm zu legen oder als 'Ablenkung' verwendet
@@ -337,7 +336,7 @@ Angriffe
 - Sicherheitsvorkehrungen: 
 	- Logs des DHCP-Servers auf Unregelmäßigkeiten untersuchen
 	- entweder regelmäßig und manuell oder automatisiert durch SIEM
-</details>
+
 
 # Domain Name System DNS
 DNS befindet sich im OSI in Layer 5 (Application)
