@@ -123,14 +123,16 @@ Grundsätzliche Möglichkeiten
 <details>
 <summary>Aufbau:</summary>
  
+```
 Schicht				Richtung
-Application		| Versenden
-Presentation	V	
+Application			| Versenden
+Presentation		V	
 Session
 Transport
 Network
 Data Link			A
 Physical			|	Empfangen
+```
 </details>
 
 
@@ -162,12 +164,13 @@ Datentransport über Netzgrenzen. Öffnet Pakete nur bis Netzwerk Layer, verpack
 
 <details>
 <summary>Aufbau</summary>
- 
-Schicht												Protokoll
+```
+Schicht									Protokoll
 Anwendung/Application					Telnet, FTP, HTTP, SMTP (E-Mail) ...	
 Transport/Transport						TCP, UDP	
 Vermittlung/Network						IP + ICMP + IGMP
-Verbindung/Host-to-Netzwork		LAN (z.B. Ethernet, Token Ring, ...)
+Verbindung/Host-to-Netzwork				LAN (z.B. Ethernet, Token Ring, ...)
+```
 </details>
 
 **Data Link Layer**
@@ -180,30 +183,35 @@ Verbindung/Host-to-Netzwork		LAN (z.B. Ethernet, Token Ring, ...)
 <details>
 <summary>Paketaufbau</summary>
  
-|---60 - 1514 Bytes---|
+```
+|--- 60 - 1514 Bytes ---|
 | Header | Payload		| FCS |
-
+	|
+	V
 Header:
 | Empfänger | Absender | Typ |
+```
 </details>
-![ethernet Numbers iana.org](http://www.iana.org/assignments/ethernet-numbers)
+[ethernet Numbers iana.org](http://www.iana.org/assignments/ethernet-numbers)
 
 **TCP/IP Encapsulation**
 Mit jeden Layer kommen spezifische Informationen zu dem Paket dazu
 <details>
 <summary>Paket(informations)erweiterung</summary>
- 
+
+```
 Application 
-| Data | 														<- HTTP, SMTP, ...
+| Data | 									<- HTTP, SMTP, ...
 
 Transport
-| Data | Header | 									<- UDP, TCP
+| Data | Header | 							<- UDP, TCP
 
 Inernet
-| 		Data			| Header | 					<- IP, ICMP, DHCP, ARP
+| 		Data	| Header | 					<- IP, ICMP, DHCP, ARP
 
 Link
-| 					Data				 | Header |	<- Ethernet, DSL, WiFi, PPP 
+| 			Data		 | Header |			<- Ethernet, DSL, WiFi, PPP 
+```
 </details>
 
 **IP Adressen**
@@ -229,13 +237,9 @@ Wo werden Hex- statt Dezimalzahlen verwendet: IPv6
 | | |<- SYN, ACK | SYN-RECEIVED|	
 |ESTABL. |ACK -> | |	 ESTABLISHED|
 | |ACK, Daten -> | |	 |
-| | |<- ACK |	 |					
-							
-						
-					
-						
+| | |<- ACK |	 |									
 
-![Folien verlinkung zu FTP](ftp://ftp.isi.edu/in-notes/rfc793.txt)
+[Folien FTP verlinkung](ftp://ftp.isi.edu/in-notes/rfc793.txt)
 
 # Data Link Layer
 ## VPN
