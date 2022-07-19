@@ -222,8 +222,8 @@ Grundsätzliche Möglichkeiten
 # Grundlagen Netzwerke
 ## ISO/OSI
 
-<details>
-<summary>Aufbau:</summary>
+
+Aufbau:
 |Schicht	   |Richtung   |
 |---|---|
 |Application   | Versenden   |
@@ -234,7 +234,6 @@ Grundsätzliche Möglichkeiten
 |Data Link     |  ↑ |
 |Physical      |  Empfangen |
 
-</details>
 
 
 <details>
