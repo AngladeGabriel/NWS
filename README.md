@@ -378,7 +378,7 @@ _Name des Hosts, der bereit ist E-Mail für diese Domain zu akzeptieren_
 - NS			Name Server
 _Nameserver für diese Domain_
 
-![detaillierte erklärugn](https://www.cisco.com/c/en/us/support/docs/ip/domain-name-system-dns/12684-dns-resource.html)
+[detaillierte erklärung](https://www.cisco.com/c/en/us/support/docs/ip/domain-name-system-dns/12684-dns-resource.html)
 
 ## Software
 - DNS-Client wird Resolver genannt
