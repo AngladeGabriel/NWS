@@ -18,9 +18,15 @@ _Loop end_
 - complete Mission				Unusual file transfer activity from ADMIN
 
 **Stand der Technik**
-hoch <----										Innovationsgrad											-----> niedrig
-Stand Wissenschaft/Forschung	Stand Technik				Allgemeine Regeln der Technik	
-niedrig <----									Bewährung Praxis										-----> hoch
+
+|Stand der Technik  | | |
+|----------|:-------------:|------:|
+| hoch <---- |  Innovationsgrad | -----> niedrig |
+| Stand Wissenschaft/Forschung |    Stand Technik   |  Allgemeine Regeln der Technik |
+| niedrig <----	 | Bewährung Praxis |   -----> hoch |
+																					
+						
+																		
 
 
 <details>
