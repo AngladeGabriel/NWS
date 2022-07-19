@@ -1,8 +1,89 @@
 # NWS Klausurrelevante Themen
 
+- [NWS Klausurrelevante Themen](#nws-klausurrelevante-themen)
+- [Grundlagen II](#grundlagen-ii)
+	- [Bedrohungslage](#bedrohungslage)
+		- [Killchain/Attack Life Cycle](#killchainattack-life-cycle)
+	- [Stand der Technik](#stand-der-technik)
+	- [IT-Sicherheit](#it-sicherheit)
+		- [Basis Sicherheitscheck](#basis-sicherheitscheck)
+	- [Schutzziele](#schutzziele)
+	- [Sicherheitsmechanismen](#sicherheitsmechanismen)
+	- [Sicherheitsmaßnahmen](#sicherheitsmaßnahmen)
+	- [Authentisierung](#authentisierung)
+- [Grundlagen Netzwerke](#grundlagen-netzwerke)
+	- [ISO/OSI](#isoosi)
+	- [TCP/IP](#tcpip)
+- [Data Link Layer](#data-link-layer)
+	- [VPN](#vpn)
+		- [Layer 1](#layer-1)
+		- [Layer 2](#layer-2)
+		- [Layer >=3](#layer-3)
+	- [Port Security 802.1x](#port-security-8021x)
+- [DHCP](#dhcp)
+	- [Nutzen/Verwendung:](#nutzenverwendung)
+	- [Architektur](#architektur)
+	- [Angriffe](#angriffe)
+- [Domain Name System DNS](#domain-name-system-dns)
+	- [Delegation und Zonen](#delegation-und-zonen)
+	- [Software](#software)
+	- [Auflösung von Domain-Namen](#auflösung-von-domain-namen)
+	- [RFCs](#rfcs)
+	- [Takeaway](#takeaway)
+	- [Design](#design)
+- [DNSSEC](#dnssec)
+	- [Herausvorderungen](#herausvorderungen)
+	- [Lösungen](#lösungen)
+- [LDAP Leightweight Directory Access Protocol](#ldap-leightweight-directory-access-protocol)
+	- [Vor/Nachteile](#vornachteile)
+	- [Verzeichnis](#verzeichnis)
+- [Basisdienste - AD](#basisdienste---ad)
+	- [Aufbau](#aufbau)
+	- [Domäne](#domäne)
+	- [Orga. Einheit OU](#orga-einheit-ou)
+	- [Objekte](#objekte)
+	- [Sicherheit](#sicherheit)
+- [RADIUS](#radius)
+	- [Anwendungsmöglichkeiten](#anwendungsmöglichkeiten)
+	- [Grundlegende Funktion](#grundlegende-funktion)
+	- [Sicherheit](#sicherheit-1)
+- [PKI/SSL, Verschlüsselung](#pkissl-verschlüsselung)
+	- [Symmetrische Verschlüsselung](#symmetrische-verschlüsselung)
+	- [Asymmetrische Verschlüsselung](#asymmetrische-verschlüsselung)
+	- [PFS Perfect Forward Secrecy](#pfs-perfect-forward-secrecy)
+	- [PKI](#pki)
+		- [Klasse 1](#klasse-1)
+		- [Klasse 2](#klasse-2)
+		- [Klasse 3](#klasse-3)
+		- [X.509 PKIX Cert](#x509-pkix-cert)
+		- [Revocation](#revocation)
+		- [SSL/TLS](#ssltls)
+	- [Takeaway](#takeaway-1)
+- [Firewalls I](#firewalls-i)
+	- [Paketfilter Technologie](#paketfilter-technologie)
+	- [FTP](#ftp)
+	- [Bastion Host](#bastion-host)
+	- [Dual Homed Host](#dual-homed-host)
+		- [Vorteile](#vorteile)
+		- [ALG application level gateway](#alg-application-level-gateway)
+		- [FW Systeme heute](#fw-systeme-heute)
+	- [Sicherheit](#sicherheit-2)
+- [Firewalls II](#firewalls-ii)
+	- [Stateful Packetfilter](#stateful-packetfilter)
+	- [ALG Application Level Gateway](#alg-application-level-gateway-1)
+	- [Hybrid FW](#hybrid-fw)
+- [Proxy Server](#proxy-server)
+	- [Implementierung](#implementierung)
+- [VPNs Virtuelle Private Netze](#vpns-virtuelle-private-netze)
+	- [OpenVPN](#openvpn)
+- [E-Mail Sicherheit](#e-mail-sicherheit)
+- [E-Mail Sicherheit II](#e-mail-sicherheit-ii)
+- [Advanced Security Technologies](#advanced-security-technologies)
+	- [Vuln Management](#vuln-management)
+
 # Grundlagen II
-**Bedrohungslage**
-**Killchain/Attack Life Cycle**
+## Bedrohungslage
+### Killchain/Attack Life Cycle
 ![Ablauf](/img/killchain.png)
 
 Steps											Examples
@@ -17,7 +98,7 @@ _Loop start_
 _Loop end_ 
 - complete Mission				Unusual file transfer activity from ADMIN
 
-**Stand der Technik**
+## Stand der Technik
 
 |Stand der Technik  | | |
 |----------|:-------------:|------:|
@@ -38,13 +119,13 @@ _Loop end_
 </details>
 
 ## IT-Sicherheit
-Basis Sicherheitscheck 
+### Basis Sicherheitscheck   
 Nutzen:
 - soll schnellen Überblick über vorhandenes Sicherheitsniveau bieten
 - gibt Auskunft über fehldende Maßnahmen (soll/ist-Abgleich)
 - Grundschutzmaßnahmen werden abgebildet 
-- Niveau genügt nur bei niedrigem bis mittlerem Schutzbedarf (schätzung BSI ~80% der IT-Systeme)
-Ablauf:
+- Niveau genügt nur bei niedrigem bis mittlerem Schutzbedarf (schätzung BSI ~80% der IT-Systeme)  
+**Ablauf:**
 - Interviews helfen den Status quo eines Informationsverbungs zu bestimmen
 	- Sicherheitsmaßnahmen der IT-Grundschutz-Kataloge als Richtlinie 
 - Ergebnis ist Katalog
@@ -54,30 +135,37 @@ Ablauf:
 ![Übersicht](img/schutzziele.png)
 
 Definieren Anforderungen:
-CIA 
+**CIA**   
 - Confidentiality			Vertraulichkeit
 - Integrity						Unversehrtheit
 - Availability				Verfügbarkeit
-ANL
+
+**ANL**  
 - Authenticity				Authentizität
 - Non-repudiation			Verbindlichkeit
 - Legitimate use			Nutzungsbeschränkung
 
 ## Sicherheitsmechanismen
 Definieren Umsetzung zur Erfüllung von Schuztzielen:
-- Authentication			Authentisierung
+- **Authentication** - Authentisierung
 _Identität von Akteuren wird sichergestellt_
-- Access protection		Zugriffsschutz
+
+- **Access protection** - Zugriffsschutz
 _Zugriffsversuche auf Ressourcen werden überwacht_
-- Encryption					Verschlüsselung
+
+- **Encryption** - Verschlüsselung
 _Daten werden unlerserlich gemacht_
-- Auditing						Protokollierung			
+
+- **Auditing** - Protokollierung			
 _sicherheitsrelevante Vorgänge im System werden persistiert_
-- Intrusion detect.		Einbruchsdentdeckung
+
+- **Intrusion detection** - Einbruchsdentdeckung
 _überwachung von Versuchen, Sicherheitsmaßnahmen zu umgehen_
-- Informationflow ctr Informationsflusskontrolle
+
+- **Informationflow control** - Informationsflusskontrolle
 _überwachung des Informationsfluss von Instanzen_
-- Interference ctrl 	Interferenzkontrolle
+
+- **Interference control** - Interferenzkontrolle
 _Schutz gegen Ableiten von nicht berechtigten Informationen aus Daten_
 
 
@@ -92,7 +180,7 @@ _Schutz gegen Ableiten von nicht berechtigten Informationen aus Daten_
 	- betreiber des Systems legen fest, welche Schutzziele erreicht werden sollen
 </details>
 
-**Sicherheitsmaßnahmen**
+## Sicherheitsmaßnahmen
 Kategorisierung					Gegenstück: Killchain Abschnitt 
 - Preventtion (P) 			init recon - Foothold
 - Detection		(D)				Loop 
@@ -108,7 +196,7 @@ Technische Maßnahmen:
 - D Intrusion Detection Systeme
 - R Automatisierte Rekonfiguration und technische Maßnahmen
 
-### Authentisierung
+## Authentisierung
 Es wird Unterschieden zwischen
 - Auth des Datensprungs
 - Benutzer Auth
@@ -237,14 +325,14 @@ Wo werden Hex- statt Dezimalzahlen verwendet: IPv6
 
 **TCP Verbindungsaufbau**
 3-Way-Hanshake
-```
-# Alice								# Bob
-SYN-Sent		SYN ->			
-					<- SYN, ACK		SYN-RECEIVED
-ESTABL.			ACK ->				ESTABLISHED
-					ACK, Daten ->
-				<- ACK
-```								
+|Alice	|			|		|	Bob|
+|---|---|---|---|
+|SYN-Sent |	SYN -> |	  |	 	|
+| |	 |	 <- SYN, ACK		|	SYN-RECEIVED|
+|ESTABL. |	ACK ->	| 	|	ESTABLISHED|
+| |		| ACK, Daten ->	|	|
+| |		| <- ACK|	|
+
 
 [Folien FTP verlinkung](ftp://ftp.isi.edu/in-notes/rfc793.txt)
 
@@ -255,7 +343,7 @@ Grundidee:
 - Soll bezüglich Vertraulichkeit und Datenintegrität mit pysischen LANs vergleichbar sein
 - Virtulalisierung auf jeder Schicht des OSI-Modells möglich
 
-**Layer 1**
+### Layer 1
 - VPWS	Virtual Private Wire Service
 	- Provider bietet Punkt zu Punkt Verbindung
 - VPLS	Virtual Private Line Service (in Layer 2 gleiche Abkürzung)
@@ -266,7 +354,7 @@ Grundidee:
 	- Kunde kann diese nutzen wie einen dedizierten Schicht 1 Link
 	- Über dieselben Glasfasern werden auch andere Kunden bedient (andere Farbe)
 
-**Layer 2**
+### Layer 2
 Umsetzungen
 - *VLAN*	Virtual LAN
 	- Mehere LAN Broadcast Domains über den selben physischen Link
@@ -295,7 +383,7 @@ Aufgaben
 - Heute Standard in Unternehmens- und Hochschulnetzen
 	- in Switchen im Consumerberich oft nicht unterstütz
 
-**Layer >=3**
+### Layer >=3
 - IPSec
 - SSL/TLS
 - OpenVPN
@@ -316,7 +404,7 @@ Standard zur Authentifizierung in Rechnernetzen
 # DHCP
 Ist in OSI auf Layer 5 (Application)
 
-### Nutzen/Verwendung:
+## Nutzen/Verwendung:
 - ermöglicht automatische Netzwerkkonfiguration eines Clients durch Server
 - Zuordnung IP-Addr erfolgt über MAC-Adresse Netzwerkkarte
 	- mobile Clients haben idR. 2: LAN und WLAN
@@ -335,7 +423,7 @@ Ist in OSI auf Layer 5 (Application)
 	- Proxy-Konfiguration via WPAD
 
 
-### Architektur
+## Architektur
 
 - Layer 2 Segment darf nur einen aktiven DHCP Server haben der Anfragen beantwortet
 - redundanz ist heikles Thema
@@ -344,7 +432,7 @@ Ist in OSI auf Layer 5 (Application)
 - **DHCP Realy Funktion** beseitigt Problem in jedem Layer 2 Netz dedizierten DHCP Server zu haben. Bietet die Möglichkeit über Netzgrenzen hinweg (broadcast) DHCP nutzen zu können
 
 
-### Angriffe
+## Angriffe
 
 **Starvation Attack**
 - Angreifer führt eine Menge DHCP-Requests durch bis Server keine neuen/freien IP-Adressen verfügbar hat
@@ -419,7 +507,7 @@ domain.example.com
 - `dig` ist umfangreiches Werkzeug für DNS (löst resolver `nslookup` ab)
 - Meist verwendeter DNS-Server ist BIND
 
-**Auflösung von Domain-Namen** 
+## Auflösung von Domain-Namen
 - _Rekursive Abfragen_
 	- Anfrage wird von Nameserver zu Nameserver weitergeleitet, bis autorativer Server gefunden ist  
 Beispiel hs-mannheim.de:
@@ -449,7 +537,7 @@ Beispiel hs-mannheim.de:
 - Client stellt rekursive Anfragen an Default-Nameserver
 	- dieser kann rekursiv oder (besser) itterativ auflösen
 
-RFCs
+## RFCs
 
 **RFC 7858**
 - DNS over TLS Transport Layer Secuirty  aka. DoT
@@ -467,7 +555,7 @@ RFCs
 - Microsoft hat in Windows 10 ab 19628.1 DNS over HTTPS DoH integriert
 
 
-**Takeaway**
+## Takeaway
 - bei DNS handelt es sich um eine verteilte, hierarische Datenbank
 - Kommunikation 
 	- ist unverschlüsselt und damit weder vertraulich noch integer
@@ -557,7 +645,7 @@ ausgeschrieben: Domain Name System Security Extensions
 - Authentifizierung von Server oder Clients findet nicht statt
 </details>
 
-**Herausvorderungen**
+## Herausvorderungen
 <details>
 <summary>ziel und rfcs</summary>
  
@@ -568,7 +656,7 @@ Ziel ist es DNS Anfragen zukünftig verschlüsselt und nicht manipulierbar zu ü
 - BIND bietet heute noch kein DoT
 </details>
 
-**Lösungen**
+## Lösungen
 - in Unternehmen spielt es keine Rolle ob lokale Anfragen im klartext übertragen werden
 - bei Übertragung der Anfragen richtung Internet kann man das theoretische Risko annhemen, dass Angreifer Insider-Informationen über aufgelöste Namen erlangen
 - Wichtige Merkmale für DNS sind:
@@ -617,7 +705,7 @@ Ist im OSI in Layer 5 (Application Layer)
 - /etc/passwd & /etc/groups unter unix		`daemon:x:2:`
 </details>
  
-**Vor/Nachteile**
+## Vor/Nachteile
 - einfach zu verstehen und einfach zu implementieren
 - skaliert nicht: unübersichtlich, keine Delegation
 
@@ -636,7 +724,7 @@ Nutzerverzeichnis ist in Form eines Baums
 	- OpenLDAP
 	- Microsoft Active Directory
 
-**Verzeichnis**
+## Verzeichnis
 - LDAP-Server speichert Daten in Baumstruktur: _Directory Information Tree_ (DIT)
 - Struktur des DIT wird durch genormtes, modulares LDAP-Schema festgelegt
 - Eintrag im DIT ist ein LDAP Objekt
@@ -657,7 +745,7 @@ Nutzerverzeichnis ist in Form eines Baums
 
 # Basisdienste - AD
 Active Directory 
-**Aufbau**
+## Aufbau
 - mehr als einfacher Baum, eher Sammlung von Bäumen:
 	- Gesamtstruktur
 	- Struktur
@@ -668,24 +756,24 @@ Active Directory
 			- Computer
 			- ...
 
-### Domäne
+## Domäne
 - abgeschlossenes Verzeichnis von Objekten
 - tree besteht aus Organisationseinheit (OU) und Objekten
 - Domäne hat einen Domain Name
 
 ![ad-domaene](img/ad-domaene.png)
 
-### Orga. Einheit OU
+## Orga. Einheit OU
 - untercontainer einer domain (Knoten im Baum/sub-tree)
 - OU kann sowohl OU als auch Objekte (Computer, Benutzer, ...) enthalten 
 
 
-### Objekte
+## Objekte
 - sind nicht unterteilbar
 - sind die kleinste Einheit (Blätter am/im Baum)
 - stehen für Netzwerkressourcen
 
-**Sicherheit**
+## Sicherheit
 - heute am weitesten verbreiteter Verzeichnisdienst
 - in windows welt authentifizieren sich die domäne benutzer mit ihrer Anmeldung am Rechner gegenüber dem AD
 	- anfallende informationen werden lokal auf rechner gespeichert
@@ -704,7 +792,7 @@ Active Directory
 - NAS Network Access Server 
 	- NAS ist ein Server, der Dienste in einem Netzwerk zB. dem Internet zur Verfügung stellt
 
-**Anwendungsmöglichkeiten**
+## Anwendungsmöglichkeiten
 - Agent, Pull und Push Sequenz
 - Agent
 	- entfernter Benutzer meldet sich beim RADIUS Server an
@@ -744,11 +832,11 @@ Inahlte des Attribut und Werte des Feldes:
 	
 ![avp](img/radius-avp.png)
 
-**Grundlegende Funktion**
+## Grundlegende Funktion
 
 ![grundlegende Funktion](img/radius-grund-funktiom.png)
 
-**Sicherheit**
+## Sicherheit
 - Historisches Protokoll das heute immernoch Anwendung findet
 	- gibt noch keine praktische/sinnvolle Alternative
 - Vertraulichkeitsniveau ist niedrig, da verschlüsselung überholt ist (impl. md5)
@@ -767,7 +855,7 @@ Bedrohungsszenario
 
 Problem: Opfer bemerken nicht dass sie abgehört werden 
 
-**Symmetrische Verschlüsselung**
+## Symmetrische Verschlüsselung
 - sym krypto Verfahren kennen Sender und Empfänger den Schlüssel
 - Schlüssel ist bitfolge mit fester Länge (zb. 256bit)
 - Nachrichten die mit schlüssel k verschlüsselt werden, können nur mit Hilfe von k wieder entschlüsselt werden (bidirektional)
@@ -788,7 +876,7 @@ Bedrohung: MitM
 - Gegenmaßnahme: weiteres/externes Wissen ist notwendig
 	- genügt wenn einer der beiden parteien ein sicheres Merkmal des anderen kennt (vgl. AKE Authenticated Key Exchange)
 
-**Asymmetrische Verschlüsselung**
+## Asymmetrische Verschlüsselung
 - seperate Schlüssel für alle Paare von Kommunikationspartnern sind oft nicht möglich
 - bekannte pubkey verfahren: RSA, ElGamal, ECC Algorithmen
 - jeder benutzer hat priv and pub key
@@ -817,24 +905,24 @@ Digitale Unteschrift mit Hash
 - Empfänger hashed nachricht
 - vergleicht beide Hashes -> stimmen überein bedeutet signatur valide
 
-**PFS Perfect Forward Secrecy**
+## PFS Perfect Forward Secrecy
 - eigenschaft bestimmter Schlüsselaustauschprotokolle, neben den Langzeitschlüsseln für jede einzelne Sitzng einen Schlüssel vereinbaren
 - ex existiert dann eine PFS wenn nach dem Ende dieser Sitzung der verwendete Session Key nicht mehr aus den Langzeitschlüsseln rekonstruiert werden kann
 - aufgezeichnete verschlüsselte Kommunikation auch bei späterer Kenntnis des Langzeitschlüssels nicht nachträglich entschlüsselt werden
 
-**PKI**
-Klasse 1
+## PKI
+### Klasse 1
 - von Zertifizierungsstelle erstellte Zertifikat sichert die angegebene E-Mail Adresse zu
 
-Klasse 2
+### Klasse 2
 - Zertifikat sichert ide Echtheit der angegbenen E-Mail Addr. sowie den dazugehörenden Namen zu
 - falls relevant auch das Unternehmen
 - Verifizierung der Angaben findet über Drittdb oder Ausweiskopie statt
  
-Klasse 3
+### Klasse 3
 - unterscheidet sich von 1 und 2, da sich Antragsteller persönlich ausweisen muss
 
-**X.509 PKIX Cert**
+### X.509 PKIX Cert
 Cert:
 - CN= ... Extended Validation SSL SGC CA
 	- 1 Jahr valide
@@ -850,7 +938,7 @@ Root:
 - CN= ... Primary Certification Authority 
 	- 25 Jahre valide
 
-**Revocation**
+### Revocation
 - geheime Schlüssel können kompromitiert werden
 - Zertifikat muss daraufhin ungültig gemacht werden
 - Typisches vorgehen:
@@ -866,7 +954,7 @@ Root:
 - OCSP Online Certificate Status Protocol bietet die Möglichkeit vor dem akzeptieren des Zertifikats, dessen aktuelle Gültigkeit zu prüfen
 - Die URL bzw. die Adresse des sogn. OCSP-Responders ist analog zur CRL im Zertifikat des Herausgebers zu finden
 
-**SSL/TLS**
+### SSL/TLS
 - das heute für eine PKI wahrscheinlich wichtigste Anwendungsgebiet im Internet sind verschlüsselte Verbindungen zu Internet-Servern
 - Gängigste Technik: SSL bzw TLS
 - Protokolle zum Authentifizieren und verschlüsseln von tcp Verbindungen
@@ -905,7 +993,7 @@ Root:
 
 ![handshake](img/ssl-handshake.png) 
 
-**Takeaway**
+## Takeaway
 - kryptografische verfahren werden benutzt um Informationen vertraulich und damit geschützt zu übertragen
 - für die verschlüsselung werden symmetrische verfahren genutzt
 	- Schlüssel muss allen teilnehmern bekannt sein
@@ -962,7 +1050,7 @@ Was kann FW nicht:
 - sichere Kommunikationverfahren end-to-end ersetzen
 	- Verschlüsselung, Authentifizierung, digitale Signaturen
 
-**Paketfilter Technologie**
+## Paketfilter Technologie
 Paketfilter befinden sich im OSI Modell auf Layer 3 und 4 (Network und Transport Layer)
 	- hier findet Überprüfung der Sende und Empfangsadresse statt
 	-	überprüfung der protokollart
@@ -1006,11 +1094,11 @@ Bsp. SMTP-Verkehr eingehend:
 	- es stellt sich mit dem potentiellen angreifer nru eine Sicherheitsbarriere in den Weg, danach ist das ganze lokale Netz ungeschützt
 	- es kann keine Kontrolle der Nutzdaten erfolgen
 
-**FTP**
+## FTP
 im OSI model im layer 5 Application
 - es gibt active und passive mode
 
-**Bastion Host**
+## Bastion Host
 - erster oder einziger Rechner der aus dem Internet erreichbar ist
 - höste Hostsicherheit ist erforderlich
 - Softwareausstattung sollte so einfach wie möglich gehlaten werden
@@ -1019,12 +1107,12 @@ im OSI model im layer 5 Application
 - darf nicht die funktionalität eines Routers erfüllen
 - Übernimmt oft die Protokollfunktionen (loggin/audits)
 
-**Dual Homed Host**
+## Dual Homed Host
 - vereinigt Gateway und Paketfilter
 - darf allerdings kein Routing möglich sein
 - Arbeitet auf Anwendungsebene
 
-Vorteile
+### Vorteile
 - es kann eine vollständige Kontrolle der Verbindungen erfolgen, da auf Anwendungsebene gearbeitet wird
 - Konfigurationsaufwand hält sich in grenzen da nur ien Rechner die FW bildet
 - die Kontrolle der Verbindung kann hierbei inhaltsbezogen durchgeführt werden
@@ -1037,7 +1125,7 @@ Nachteile
 - nur der dual homed host trennt netz vom internet so ist bspw. ein abhören der internen kommunikation möglich falls der host kompromitiert wurde
 - es müssen evtl. leistungseinbußen durch den porentiellen engpass der dual homed host in kauf genommen werden
 
-**ALG application level gateway**
+### ALG application level gateway
 vorteile
 - vollständige analyse des protokolls un anwendung von detektions und filtermechanismen
 - einfache integration in fw möglich (UTM)
@@ -1048,7 +1136,7 @@ nachteile
 - anfällig gegenüber protokollschwachstellen analog zum zu schützenden Dienst selbst
 - risiko dass über obige schwachstellen zugriff auf die gesamte fw erfolgen kann
 
-**FW Systeme heute**
+### FW Systeme heute
 - komfortable Nutzung (über UI)
 - stabile mechanismen für aktualisierung und Hochverfügbarkeit
 - hohe durchsatzraten (100Gbit/s)
@@ -1073,7 +1161,7 @@ Architektur
 - IN = WWW, SMTP, FTP
 - OUT = HTTP, SMTP
 
-**Sicherheit**
+## Sicherheit
 - eine fw stellt das mindestmaß an sicherheit in modernen Netzen dar
 - bietet jedoch als einzellösung im jahr 2020 keine nausreichenden Schutz mehr
 - die fw segmentiert die an sie angebundenen Netze
