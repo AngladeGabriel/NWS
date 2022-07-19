@@ -394,7 +394,7 @@ domain.example.com
 
 **Auflösung von Domain-Namen** 
 - _Rekursive Abfragen_
-	- Anfrage wird von Nameserver zu Nameserver weitergeleitet, bis autorativer Server gefunden ist
+	- Anfrage wird von Nameserver zu Nameserver weitergeleitet, bis autorativer Server gefunden ist  
 Beispiel hs-mannheim.de:
 
 - Host fragt bei seinem Default Nameserver
@@ -485,7 +485,7 @@ RFCs
 **Hidden Primary**
 Primary enthält autoritative DB (zum sec. werden Daten repliziert) deshalb ist primary ist beliebtes Angriffsziel
 Lösung Hidden Primary:
-<details>
+
 **Aufbau**
 - ein weiterer DNS (eigentlicher prim.)
 	- in besonders isolierten, geschützten Zone e.g. DMZ 
@@ -496,17 +496,17 @@ Lösung Hidden Primary:
 	- DNS Software aktuell halten
 	- nach Unregelmäßigkeiten auf DNS-Server suchen
 		- zB. Vergleich DNS-Anfragen udn Antworten auf den Hidden-Prim. und den beiden externen DNS-Server
-</details>
+
 **View**
-<details>
+
 - idR. möchte man nicht in jedem IT-System, dass auf den gesamten, internen Namensraum zugreifen darf
 - um für unterschiedliche Namensräume keine eigenen DNS-Server betreiben zu müssen, gibt es konfigurierbare _Views_
 - ein View gibt dem Anfragenden System nur Antworten aus dem Namensbereich, für den dies durch eine Positivliste an IP-Adressen erlaubt ist
 - idR. verwendet man keine einzelnen IP-Adressen sondern definiert IP-Netze was wiederum eine entsprechende Segmentierung voraussetzt
-</details>
+
 
 **Split-DNS**
-<details>
+
 - Alle (bis auf wenige) IT-Systeme in Unternehmensnetzen sollten von ihrem bekannten, internen DNS-Server nur Namen aufgelöst bekommne, die zu internen Systemen gehören
 - Oft leitet ein interner DNS-Server, der auf eine Frage auf Namensbereiche die er nciht selbst geben kann, an einen externen DNS-Server weiterleitet (_Forward_)
 - so können interne Systeme auch DNS-Informationen aus externen Namensräumen finden
@@ -515,7 +515,7 @@ Lösung Hidden Primary:
 	- bspw. ein CnC-Server per DNS-Tunneling
 - Praxistipp: 
 	- auf der cli ping auf extene Adresse ausführen, kommt ein e IP-Adresse zurück, ist es ein Hinweis dafür dass kein Split DNS verwendet wird und eine entsprechende Schwachstelle existiert
-</details>
+
 
 # DNSSEC
 <details>
