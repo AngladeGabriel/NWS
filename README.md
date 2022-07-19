@@ -213,11 +213,11 @@ Es wird Unterschieden zwischen
 	- Zwei- oder Mehrseitig
 
 Grundsätzliche Möglichkeiten
-- Wissen											Something you know (pin/passwd)
-- Besitz											Something you have (private key, smartcard)
-- Prersönliche Eigenschaft		Something you are (iris-scan, fingerprint)
-- kombinationen aus 1-3				
-- Delegation 									Someone who knows you (PGP)
+- **Wissen** - Something you know (pin/passwd)
+- **Besitz** - Something you have (private key, smartcard)
+- **Persönliche Eigenschaft** - Something you are (iris-scan, fingerprint)
+- **kombinationen aus 1-3**				
+- **Delegation** - Someone who knows you (PGP)
 
 # Grundlagen Netzwerke
 ## ISO/OSI
