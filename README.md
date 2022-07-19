@@ -224,17 +224,16 @@ Grundsätzliche Möglichkeiten
 
 <details>
 <summary>Aufbau:</summary>
- 
-```
-Schicht				Richtung
-Application			| Versenden
-Presentation		V	
-Session
-Transport
-Network
-Data Link			A
-Physical			|	Empfangen
-```
+|Schicht	   |Richtung   |
+|---|---|
+|Application   | Versenden   |
+|Presentation  |  ↓ |
+|Session       |   |
+|Transport     |   |
+|Network       |   |
+|Data Link     |  ↑ |
+|Physical      |  Empfangen |
+
 </details>
 
 
