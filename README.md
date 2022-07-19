@@ -483,7 +483,7 @@ RFCs
 	- Nutzt man verschiedene Provider, betriebt man idR. in jedem dieser Netze einen Server. Welcher als Primary- oder Secondary-DNS agiert ist egal
 
 **Hidden Primary**
-Primary enthält autoritative DB (zum sec. werden Daten repliziert) deshalb ist primary ist beliebtes Angriffsziel
+Primary enthält autoritative DB (zum sec. werden Daten repliziert) deshalb ist primary ist beliebtes Angriffsziel  
 Lösung Hidden Primary:
 
 **Aufbau**
@@ -589,7 +589,7 @@ Beispiele
 - skaliert nicht: unübersichtlich, keine Delegation
 
 Nutzerverzeichnis ist in Form eines Baums
-![ldap bsp baum](ldab-tree.png)
+![ldap bsp baum](img/ldab-tree.png)
 
 - LDAP ist ein Protokoll zur Abfrage von Daten eines Verzeichnisdienstes
 - Aktuelle Version LDAPv3 ist in RFCs 4510 bis 4519 definiert
