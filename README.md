@@ -231,13 +231,14 @@ Wo werden Hex- statt Dezimalzahlen verwendet: IPv6
 
 **TCP Verbindungsaufbau**
 3-Way-Hanshake
-|Alice | | | Bob|
-|---|---|---|---|---|
-|SYN-Sent |SYN -> | | |	
-| | |<- SYN, ACK | SYN-RECEIVED|	
-|ESTABL. |ACK -> | |	 ESTABLISHED|
-| |ACK, Daten -> | |	 |
-| | |<- ACK |	 |									
+```
+# Alice								# Bob
+SYN-Sent		SYN ->			
+					<- SYN, ACK		SYN-RECEIVED
+ESTABL.			ACK ->				ESTABLISHED
+					ACK, Daten ->
+				<- ACK
+```								
 
 [Folien FTP verlinkung](ftp://ftp.isi.edu/in-notes/rfc793.txt)
 
@@ -375,6 +376,7 @@ DNS Datenbank ist so groß, dass sie nicht zentral administriert werden kann
 - DNS-Namensraum in Zonen aufgeteilt
 - Zonen können Domains oder Teile von Domains sein
 - Bsp.: Zone _de_ deleigert Verantwortung für _Domain_ rz.hs-mannheim.de an das Rechnenzentrum der hs-mannheim, diese delegiert rz.hs-mannheim weiter an RZ.
+
 ![dns delegation](img/dns-baum.png)
 
 **Resource Records**
@@ -382,6 +384,7 @@ Start of Authority (SOA) Record mit:
 - Zonen-Name
 - authoritativem Name-Server 
 - und E-Mail Adresse
+
 ![ressource records](img/dns-rr.png)
 
 **Record-Typen**
@@ -663,6 +666,7 @@ Active Directory
 - abgeschlossenes Verzeichnis von Objekten
 - tree besteht aus Organisationseinheit (OU) und Objekten
 - Domäne hat einen Domain Name
+
 ![ad-domaene](img/ad-domaene.png)
 
 ### Orga. Einheit OU
@@ -888,9 +892,11 @@ Root:
 - Webserver verwenden Zertifikate um sich gegenüber dem Anwender auszuweisen
 - Clients müssen sich mit einem Zertifikat gegenüber ienem Webserver ausweisen
 - IP Stack mit SSL/TLS
+
 ![ip stack](img/ssl-ipstack.png) 
 
 - SSL/TLS Handshake
+
 ![handshake](img/ssl-handshake.png) 
 
 **Takeaway**
@@ -1633,7 +1639,7 @@ Emails stellen auch heute das risiko #1 für angriffe dar wesewegen es strukture
 
 
 
-
+<!--
 __Misc__
 ### Icons
 ![hub](img/hub.png)
@@ -1682,4 +1688,4 @@ Lab umgebung Seite 12 in Virtualisierungsfoliensatz
 9		Agent Pull und Push Sequenz (immernoch RADIUS)
 10		Agent Push Sequenz
 		- wird in der Regel nicht mehr benutzt
-
+-->
