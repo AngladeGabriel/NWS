@@ -10,6 +10,8 @@
 	- [Schutzziele](#schutzziele)
 	- [Sicherheitsmechanismen](#sicherheitsmechanismen)
 	- [Sicherheitsmaßnahmen](#sicherheitsmaßnahmen)
+		- [Organisatorische Maßnahmen:](#organisatorische-maßnahmen)
+		- [Technische Maßnahmen:](#technische-maßnahmen)
 	- [Authentisierung](#authentisierung)
 - [Grundlagen Netzwerke](#grundlagen-netzwerke)
 	- [ISO/OSI](#isoosi)
@@ -134,7 +136,7 @@ Nutzen:
 ## Schutzziele
 ![Übersicht](img/schutzziele.png)
 
-Definieren Anforderungen:
+Definieren Anforderungen:  
 **CIA**   
 - Confidentiality			Vertraulichkeit
 - Integrity						Unversehrtheit
@@ -172,26 +174,32 @@ _Schutz gegen Ableiten von nicht berechtigten Informationen aus Daten_
 <details>
 <summary>Extra:</summary>
  
-- Security reqirem.		Sicherheitsanforderungen
+- **Security reqirements** - Sicherheitsanforderungen
 	- Auftraggeber/Entwickler legt fest, welche Schutzziele erreichbar sein sollen
 	- Präzisionsgrad variiert. Hohe Anforderungen verwenden formale Sicherheitsmodelle
-- Secuirty policy			Sicherheitsrichtlinien
+- **Secuirty policy** - Sicherheitsrichtlinien
 	- Sicherheits-Leitlinie -> Sicherheitsstrategie -> Umsetzungsvorgaben
 	- betreiber des Systems legen fest, welche Schutzziele erreicht werden sollen
 </details>
 
 ## Sicherheitsmaßnahmen
-Kategorisierung					Gegenstück: Killchain Abschnitt 
-- Preventtion (P) 			init recon - Foothold
-- Detection		(D)				Loop 
-- Response		(R)				Complete Mission
 
-Organisatorische Maßnahmen:
+![Ablauf](/img/killchain.png)
+
+|Kategorisierung	   |Gegenstück: Killchain Abschnitt    |
+|---|---|
+|**Prevention (P)**   | Initial recon - Foothold  |
+|**Detection (D)**   | Loop   |
+|**Response (R)**  | Complete Mission  |
+				
+
+
+### Organisatorische Maßnahmen:
 - P Schulung
 - D Auswertung von Log-Files
 - R Security Incident Response Prozess
 
-Technische Maßnahmen:
+### Technische Maßnahmen:
 - P Firewalls
 - D Intrusion Detection Systeme
 - R Automatisierte Rekonfiguration und technische Maßnahmen
