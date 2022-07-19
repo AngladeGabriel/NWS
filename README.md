@@ -396,7 +396,7 @@ domain.example.com
 - _Rekursive Abfragen_
 	- Anfrage wird von Nameserver zu Nameserver weitergeleitet, bis autorativer Server gefunden ist
 Beispiel hs-mannheim.de:
-<details>
+
 - Host fragt bei seinem Default Nameserver
 - leitet die Anfrage für de. an einen Root-Nameserver (bspw. a.root-servers.net)
 - Root-Nameserver kennt die Antwort nicht
@@ -405,12 +405,12 @@ Beispiel hs-mannheim.de:
 - Dieser kennt die für diese Domain eingetragenen Name-Server und stellt Anfrage an einen bspw. dns1.belwue.de
 - dieser liefert Antwort in Form eines A-Records auf IP-Addr 141.19.1.171
 	- Ergebnis gibt er zurück an DNS-Server des DENIC der Antwort an ursprünglichen Root-Name-Server schickt
-</details>
+
 - _Itterative Abfragen_
 	- nameserver erhält auf Frage jeweils eine List mit Nameservern zurück
 		- Listeneinträge werden als nächstes nach ziel befragt
 Beispiel hs-mannheim.de:
-<details>
+
 - Host fragt bei Default-Nameserver (der konfiguriert/per DHCP bekannt sein muss)
 - leitet Anfrage für de. an einen root-Nameserver (bspw. a.root-servers.net)
 - dieser erhält die Antowrt, dass für die Zone die Server des DENIC (bspw. a.nic.de) verantwortlich sind
@@ -418,12 +418,12 @@ Beispiel hs-mannheim.de:
 	- antwortet: esg gibt 3 autorative Name-Server für Domain
 - Jeder der 3 Name-Server wird Antworten:
 	- A-Record mit IP-Adresse 141.19.1.171
-</details>
+
 - Client stellt rekursive Anfragen an Default-Nameserver
 	- dieser kann rekursiv oder (besser) itterativ auflösen
 
 RFCs
-<details>
+
 **RFC 7858**
 - DNS over TLS Transport Layer Secuirty  aka. DoT
 - DNS-Anfragen versclhüsselt über TLS (TCP/853)
@@ -438,7 +438,7 @@ RFCs
 - DNS over HTTPS aka DoH
 - DNS-Anfragen werden HTTPS verschlüsselt übertragen TCP/443
 - Microsoft hat in Windows 10 ab 19628.1 DNS over HTTPS DoH integriert
-</details>
+
 
 **Takeaway**
 - bei DNS handelt es sich um eine verteilte, hierarische Datenbank
@@ -452,7 +452,7 @@ RFCs
 
 - Unterscheidung zwischen externem und internem DNS
 	- externes DNS
-<details>
+
 	- _ext_ als Besitzer einer Domain/Namensraum muss er, dafür notwendige informationen dem öffentlichen Internet zu Verfügung stellen. Mögliche Ansätze:
 		- Provider DNS
 			- verwaltet die Zone und bietet Schnittstelle zur konfiguration
@@ -464,15 +464,15 @@ RFCs
 			- es müssen mind. 2 Nameserver beim Registrar bzw. NIC eingetragen sein
 			- es empfielt sich wegen redundanz, die Nameserver in unterschiedlichen Netzen (damit auch bei unterschiedlichen Internet-Providern) zu hosten
 			- nach außen sichtbare/erreichbare Nameserver sind lediglich secondary Nameserver die von einem nicht sichtbaren und von außen nicht erreichbarem Primary Nameserver konfiguriert werden = _hidden Primary_
-</details>
+
 	- internes DNS
-<details>
+
 	- Anfragen von internen Systemen auf interne und externe Domänen oder Adressen beantworten
 	- beantworten von internen Anfragen werden analog zum externen DNS (wegen Redundanz) auch mind. 2 Name-Server betrieben
 			- Name Server IP-Adressen werden per DHCP an Clients weitergegeben
 	- Anfragen internes System -> externe Domain sollen nicht von internen DNS-Servern beantwortet werden. Grund: Split DNS
 		- soll vermeiden, dass über DNS Tunneling verdeckte Kommunikation mit Internet möglich ist (CnC-Server)
-</details>
+
 
 ## Design
 - Für interne Namensauflösung werden interne DNS-Server betrieben
