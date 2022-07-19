@@ -22,8 +22,10 @@ hoch <----										Innovationsgrad											-----> niedrig
 Stand Wissenschaft/Forschung	Stand Technik				Allgemeine Regeln der Technik	
 niedrig <----									Bewährung Praxis										-----> hoch
 
-Grobes Fazit:
+
 <details>
+<summary>Grobes Fazit:</summary>
+ 
 -> Stand der Technik ist auf Mitte zwischen Wissenschaft und allgemein Anerkannter Technik.
 - Wissenschaft hat hohen Innovationsgrad aber niedrige Bewährung in der Praxis
 - Allgemein anerkannte Regeln der Technik bewährt sich stark in der Praxis, Innovationsgrad ist allerdings eher gering
@@ -72,8 +74,10 @@ _überwachung des Informationsfluss von Instanzen_
 - Interference ctrl 	Interferenzkontrolle
 _Schutz gegen Ableiten von nicht berechtigten Informationen aus Daten_
 
-Extra:
+
 <details>
+<summary>Extra:</summary>
+ 
 - Security reqirem.		Sicherheitsanforderungen
 	- Auftraggeber/Entwickler legt fest, welche Schutzziele erreichbar sein sollen
 	- Präzisionsgrad variiert. Hohe Anforderungen verwenden formale Sicherheitsmodelle
@@ -115,20 +119,26 @@ Grundsätzliche Möglichkeiten
 
 # Grundlagen Netzwerke
 ## ISO/OSI
-Aufbau:
+
 <details>
+<summary>Aufbau:</summary>
+ 
+```
 Schicht				Richtung
-Application		| Versenden
-Presentation	V	
+Application			| Versenden
+Presentation		V	
 Session
 Transport
 Network
 Data Link			A
 Physical			|	Empfangen
+```
 </details>
 
-Beispiel:
+
 <details>
+<summary>Beispiel:</summary>
+ 
 - Absender schriebt E-Mail
 - Dieses große Datenpaket wird in Transportschicht in kleine Pakete zerlegt
 - Netzwerkschickt erweitert Datenpakete, um Informationen wie zu verwendendes Protokoll 
@@ -151,13 +161,16 @@ Datentransport über Netzgrenzen. Öffnet Pakete nur bis Netzwerk Layer, verpack
 - Ist in erster Linie die Firewall
 
 ## TCP/IP
-Aufbau
+
 <details>
-Schicht												Protokoll
+<summary>Aufbau</summary>
+```
+Schicht									Protokoll
 Anwendung/Application					Telnet, FTP, HTTP, SMTP (E-Mail) ...	
 Transport/Transport						TCP, UDP	
 Vermittlung/Network						IP + ICMP + IGMP
-Verbindung/Host-to-Netzwork		LAN (z.B. Ethernet, Token Ring, ...)
+Verbindung/Host-to-Netzwork				LAN (z.B. Ethernet, Token Ring, ...)
+```
 </details>
 
 **Data Link Layer**
@@ -166,30 +179,39 @@ Verbindung/Host-to-Netzwork		LAN (z.B. Ethernet, Token Ring, ...)
 - Die Pakete sind zusätzlich mit Prüfsumme versehen (FCS Frame Check Sequence)
 - Kaputte Pakete werden nicht repariert sondern ignoriert
 
-Paketaufbau
-<details>
-|---60 - 1514 Bytes---|
-| Header | Payload		| FCS |
 
+<details>
+<summary>Paketaufbau</summary>
+ 
+```
+|--- 60 - 1514 Bytes ---|
+| Header | Payload		| FCS |
+	|
+	V
 Header:
 | Empfänger | Absender | Typ |
+```
 </details>
-![ethernet Numbers iana.org](http://www.iana.org/assignments/ethernet-numbers)
+[ethernet Numbers iana.org](http://www.iana.org/assignments/ethernet-numbers)
 
 **TCP/IP Encapsulation**
 Mit jeden Layer kommen spezifische Informationen zu dem Paket dazu
 <details>
+<summary>Paket(informations)erweiterung</summary>
+
+```
 Application 
-| Data | 														<- HTTP, SMTP, ...
+| Data | 									<- HTTP, SMTP, ...
 
 Transport
-| Data | Header | 									<- UDP, TCP
+| Data | Header | 							<- UDP, TCP
 
 Inernet
-| 		Data			| Header | 					<- IP, ICMP, DHCP, ARP
+| 		Data	| Header | 					<- IP, ICMP, DHCP, ARP
 
 Link
-| 					Data				 | Header |	<- Ethernet, DSL, WiFi, PPP 
+| 			Data		 | Header |			<- Ethernet, DSL, WiFi, PPP 
+```
 </details>
 
 **IP Adressen**
@@ -209,19 +231,16 @@ Wo werden Hex- statt Dezimalzahlen verwendet: IPv6
 
 **TCP Verbindungsaufbau**
 3-Way-Hanshake
-|Alice | | | Bob|
-|---|---|---|---|---|
-|SYN-Sent |SYN -> | | |	
-| | |<- SYN, ACK | SYN-RECEIVED|	
-|ESTABL. |ACK -> | |	 ESTABLISHED|
-| |ACK, Daten -> | |	 |
-| | |<- ACK |	 |					
-							
-						
-					
-						
+```
+# Alice								# Bob
+SYN-Sent		SYN ->			
+					<- SYN, ACK		SYN-RECEIVED
+ESTABL.			ACK ->				ESTABLISHED
+					ACK, Daten ->
+				<- ACK
+```								
 
-![Folien verlinkung zu FTP](ftp://ftp.isi.edu/in-notes/rfc793.txt)
+[Folien FTP verlinkung](ftp://ftp.isi.edu/in-notes/rfc793.txt)
 
 # Data Link Layer
 ## VPN
@@ -357,6 +376,7 @@ DNS Datenbank ist so groß, dass sie nicht zentral administriert werden kann
 - DNS-Namensraum in Zonen aufgeteilt
 - Zonen können Domains oder Teile von Domains sein
 - Bsp.: Zone _de_ deleigert Verantwortung für _Domain_ rz.hs-mannheim.de an das Rechnenzentrum der hs-mannheim, diese delegiert rz.hs-mannheim weiter an RZ.
+
 ![dns delegation](img/dns-baum.png)
 
 **Resource Records**
@@ -364,6 +384,7 @@ Start of Authority (SOA) Record mit:
 - Zonen-Name
 - authoritativem Name-Server 
 - und E-Mail Adresse
+
 ![ressource records](img/dns-rr.png)
 
 **Record-Typen**
@@ -519,6 +540,8 @@ Lösung Hidden Primary:
 
 # DNSSEC
 <details>
+<summary>dnssec deails</summary>
+ 
 ausgeschrieben: Domain Name System Security Extensions
 - Reihe von Internetstandards, die DNS um Sicherheitsmechanismen erweitern 
 - Ziel ist es Authentizität und Integrität der Daten zu erlangen
@@ -530,6 +553,8 @@ ausgeschrieben: Domain Name System Security Extensions
 
 **Herausvorderungen**
 <details>
+<summary>ziel und rfcs</summary>
+ 
 Ziel ist es DNS Anfragen zukünftig verschlüsselt und nicht manipulierbar zu übertragen. Damit würde injizierung anderer Datenpakte unterbunden werden (DNS Cache Poisoning)
 - im default ist die gesamte kommunikation unverschlüsselt
 - RFC 8094 (DTLS) gehört zur kategorie experimentell
@@ -573,8 +598,10 @@ Ist im OSI in Layer 5 (Application Layer)
 	- lediglich Abhängigkeit zwischen Einträgen abgebildet
 	- dadurch sind bspw. Zusammenfassungen in Gruppen möglich
 
-Beispiele
+
 <details>
+<summary>Beispiele</summary>
+ 
 - windows NT 4.0 Domäne										`border:/root # cat /etc/passwd`
 - lokale Benutzer unter windows						`root:x:0:0:root:/root:/bin/bash`
 - /etc/passwd & /etc/groups unter unix		`daemon:x:2:2:Daemon:/sbin:/bin/bash`
@@ -639,6 +666,7 @@ Active Directory
 - abgeschlossenes Verzeichnis von Objekten
 - tree besteht aus Organisationseinheit (OU) und Objekten
 - Domäne hat einen Domain Name
+
 ![ad-domaene](img/ad-domaene.png)
 
 ### Orga. Einheit OU
@@ -864,9 +892,11 @@ Root:
 - Webserver verwenden Zertifikate um sich gegenüber dem Anwender auszuweisen
 - Clients müssen sich mit einem Zertifikat gegenüber ienem Webserver ausweisen
 - IP Stack mit SSL/TLS
+
 ![ip stack](img/ssl-ipstack.png) 
 
 - SSL/TLS Handshake
+
 ![handshake](img/ssl-handshake.png) 
 
 **Takeaway**
@@ -1609,7 +1639,7 @@ Emails stellen auch heute das risiko #1 für angriffe dar wesewegen es strukture
 
 
 
-
+<!--
 __Misc__
 ### Icons
 ![hub](img/hub.png)
@@ -1658,4 +1688,4 @@ Lab umgebung Seite 12 in Virtualisierungsfoliensatz
 9		Agent Pull und Push Sequenz (immernoch RADIUS)
 10		Agent Push Sequenz
 		- wird in der Regel nicht mehr benutzt
-
+-->
