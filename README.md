@@ -635,26 +635,21 @@ Active Directory
 			- Computer
 			- ...
 
-Domäne
-<details>
+### Domäne
 - abgeschlossenes Verzeichnis von Objekten
 - tree besteht aus Organisationseinheit (OU) und Objekten
 - Domäne hat einen Domain Name
 ![ad-domaene](img/ad-domaene.png)
-</details>
 
-Orga. Einheit OU
-<details>
+### Orga. Einheit OU
 - untercontainer einer domain (Knoten im Baum/sub-tree)
 - OU kann sowohl OU als auch Objekte (Computer, Benutzer, ...) enthalten 
-</details>
 
-Objekte
-<details>
+
+### Objekte
 - sind nicht unterteilbar
 - sind die kleinste Einheit (Blätter am/im Baum)
 - stehen für Netzwerkressourcen
-</details>
 
 **Sicherheit**
 - heute am weitesten verbreiteter Verzeichnisdienst
