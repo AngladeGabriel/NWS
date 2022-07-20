@@ -1476,7 +1476,7 @@ Technologien:
 	- ip wird in ip eingebettet
 
 Beispiel:
-![side2side](proxy-site-to-side.png)
+![side2side](img/proxy-site-to-side.png)
 
 ISDN | PPP | IP-Hdr | UDP | L2TP | PPP | IP-Hdr | Data |
 |					Träger					|		Tunnel	 | 	Passagier		 |
