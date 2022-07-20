@@ -1622,7 +1622,7 @@ Mail
 **Gegenmaßnahmen**
 SPF Sender Policy Framework
 	- mittels SPF kann ein Empfänger anhand der Absender IP-Adresse und der Absenderdomain prüfen, ob eine E-Mail vom vorgesehenen, also für eine Domain zuständigen Mailserver versendet wurde
-![srf](img/spf.img)
+![srf](img/srf.png)
 
 - jeder spf record beginnt mit einer versionsnr
 - es folgen beliebig viele ausdrücke, die in der Reihenfolge von vorne nach hinten ausgewertet werden
@@ -1636,7 +1636,7 @@ SPF Sender Policy Framework
 
 DMARC Domain-based Message Authentication Reporting and Conformance
 - mit DMARClegt eine Senderdomain unter anderem fest, wie der Empfänger zu verfahren hat, wenn er E-Mails erhält, die bei SPF- und DKIM-Prüfungen durchfällt
-![srf](img/dmarc.img)
+![srf](img/dmarc.png)
 
 - DMARC ist keine zusätzliche Technik sondern ein Regelwerk zum Umgang mit SPF- und DKIM-Informationen
 - Richtlinien legen fest wie bei Verstößen gegen SPF- und DKIM-Regeln zu verfahren ist und ob/wie berichtet wird
