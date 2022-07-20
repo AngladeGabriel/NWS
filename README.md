@@ -77,6 +77,8 @@
 - [Proxy Server](#proxy-server)
 	- [Implementierung](#implementierung)
 	- [WAF Web Application Firewall](#waf-web-application-firewall)
+	- [Explicit/Direct](#explicitdirect)
+	- [Management](#management)
 - [VPNs Virtuelle Private Netze](#vpns-virtuelle-private-netze)
 	- [OpenVPN](#openvpn)
 - [E-Mail Sicherheit](#e-mail-sicherheit)
@@ -1348,7 +1350,7 @@ Nachteile
 - Anwendungen die stark auf JS basieren (AJAX) besitzen eine hohe komplexität
 - Moderne Web-Apps bringen bereits eigene FW module mit (bspw. wordpress mit wordfence)
  
-**Explicit/Direct**
+## Explicit/Direct  
 Explicit
 - client bekommt Konfigurationsinformation
 	- diese weist Browser an, Anfragen an den Proxy zu stellen
@@ -1366,7 +1368,7 @@ Direct (Transparent)
 		- proxy baut mit den Informationen aus der Anfrage selbst die Verbindung zum Zielsystem auf
 		- es können die gleichen Filtermechanismen angewendet werden wie bei einem Explicit proxy server
 
-**Management**
+## Management
 PAC Proxy Auto Config
 - PAC Dateien enthalten JS Funktion `FindProxyForURL(url, host)`
 - funktion gibt einen string mit einer oder mehreren Proxyspezifikationen zurück
