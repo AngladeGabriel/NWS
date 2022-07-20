@@ -76,6 +76,7 @@
 	- [UTM Unified Threat Modeling](#utm-unified-threat-modeling)
 - [Proxy Server](#proxy-server)
 	- [Implementierung](#implementierung)
+	- [WAF Web Application Firewall](#waf-web-application-firewall)
 - [VPNs Virtuelle Private Netze](#vpns-virtuelle-private-netze)
 	- [OpenVPN](#openvpn)
 - [E-Mail Sicherheit](#e-mail-sicherheit)
@@ -1258,15 +1259,15 @@ Nachteile:
 
 # Proxy Server
 **Aufgaben und Nutzen**
-- an Stellen des eigenlitchen endsystems (e.g. Router/Modem) die Komunikationsverbindung zu einem bestimmten Ziel aufzubauen
-- durch diese Zwischeninstanz ergibt sich die Möglichkeit Kommunikationsbeziehungen auf Applikationsebene auf Ziel und teilweise auf Inhalt zu verbieten
-- zb. besteht im RAhmen der Gesetze zum Schutz von minderjährigen in Ausbildungsbetrieben die Vorgabe, Jugendlichen mit Zugang zu Computersystemen mit Internetzugang, den Zugang zu pornografischem Material zu verbieten
-	- Auszubildende werden der LDAP- oder AD-Gruppe 'azubis' zugeordnet
-	- proxy server besitzt eine Filterregel die den Benutzern der Gruppe 'azubis' den Zugang zu Internetadressen mit dem Merkmal 'pronografisch' verbietet
+- Ermöglichen Kommunikationsverbindung von Endsystem (Router/Modem) zu bestimmten Ziel 
+- Zwischeninstanz ermöglicht es, auf Application Layer, Kommunikation auf Ziele/Inhalte zu beschränken
+  - Bsp: Gesetze zum Schutz von Minderjährigen erfordern den Zugang zu pornografischem Material zu verbieten
+  - Auszubildende werden der LDAP- oder AD-Gruppe 'azubis' zugeordnet
+  - Proxy besitzt eine Filterregel die den Benutzern der Gruppe 'azubis' den Zugang zu Internetadressen mit dem Merkmal 'pronografisch' verbietet
 
 **Typen**
 - SOCS Proxy
-	- steht für SOCKetS = vom os bereitgestelltes Objekt das als Kommunikationsendpunkt dient
+	- steht für SOCKetS = vom os bereitgestelltes Objekt, dass als Kommunikationsendpunkt dient
 	- das SOCKS Protokoll ist ein Internet Protokoll für das es RFCs gibt
 	- Anhand der RFC-Nummern 1928, 1929, 1961 erkennt man das 'Alter' und den Entwicklungsgrad
 		- die letzte Änderung/ergänzung kam mit RFC 3089 im april 2001 zu IPv6
@@ -1289,11 +1290,11 @@ Nachteile:
 			- Browser
 			- Basic Auth
 	- Die durch den Benutzer angesteuerten Web-Seiten (URLs) können über ein Regelwerk auf Themenbereiche und Benutzergruppen eingeschränkt werden
-	- überHTTP transportierte Inhalte (MIME-Typen) werden auf viren untersucht
+	- über HTTP transportierte Inhalte (MIME-Typen) werden auf viren untersucht
 		- in moderneren Lösungen in einer Sandbox
 	- es können Regeln definiert werden, die bereits das Herunterladen bestimmter Datei-Typen verbieten um damit einhergehende Risiken zu vermeiden
 	- Moderne Proxy Systeme erkennen nicht nur den Datei Typ sondern können bspw. in Excel Dokumenten erkennen ob diese ein Makro enthalten oder nicht
-	- mit modernen Proxys ist es ebenso möglich den verschlüsselten HTTP Verkehr aufzubrechen (SSL-Interception) und die INhalte zu untersuchen
+	- mit modernen Proxys ist es ebenso möglich den verschlüsselten HTTPS Verkehr aufzubrechen (SSL-Interception) und die Inhalte zu untersuchen
 
 - FTP Proxy
 	- ist analog zum http proxy auf das FTP-Protokoll reduziert
@@ -1320,10 +1321,10 @@ Reverse-Proxy:
 - liegt zwischen Internetzugang und Webserver
 - Client verbindet sich mit Internet, wird weitergeleitet an Proxy, dieser spricht mit angefrageten Webserver
 
-**WAF Web Application Firewall**
+## WAF Web Application Firewall
 - hat die Aufgabe die Client-Server Kommunikation zu kontrollieren
-- web-server leisten mehr als ausliefern von Daten zur Darstellung im Browser
-- web-apps bieten dem Benutzer mit dem web-server und indirekt mit dem backend zu kommunizieren
+- Web-Server leisten mehr als reine Ausliefern von Daten zur Darstellung im Browser
+- Web-Apps bieten dem Benutzer die Möglichkeit mit dem Web-Werver und somit indirekt mit dem Backend zu kommunizieren
 - dabei muss die web-app die übergebenen Daten richitg interpretieren
 - auf Grund der komplexität von web-apps ist es schwer jeden Fehler zu erkennen
 - eine WAF überprüft die Form und den Inhalt der übergebenen Daten  
@@ -1350,8 +1351,8 @@ Nachteile
 **Explicit/Direct**
 Explicit
 - client bekommt Konfigurationsinformation
-	- diese weist browser an Anfragen an den Proxy zu stellen
-	- NAmensauflösung und routing basieren auf den Umgebungsbedingungen des proxy servers
+	- diese weist Browser an, Anfragen an den Proxy zu stellen
+	- Namensauflösung und Routing basieren auf den Umgebungsbedingungen des Proxy Servers
 ![explicit proxy](img/proxy-explicit.png)
 
 Direct (Transparent)
