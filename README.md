@@ -1622,9 +1622,9 @@ Mail
 **Gegenmaßnahmen**
 SPF Sender Policy Framework
 	- mittels SPF kann ein Empfänger anhand der Absender IP-Adresse und der Absenderdomain prüfen, ob eine E-Mail vom vorgesehenen, also für eine Domain zuständigen Mailserver versendet wurde
-![srf](img/srf.img)
+![srf](img/spf.img)
 
-- jeder srf record beginnt mit einer versionsnr
+- jeder spf record beginnt mit einer versionsnr
 - es folgen beliebig viele ausdrücke, die in der Reihenfolge von vorne nach hinten ausgewertet werden
 - die meisten Ausdrücke sind dabei sogn. Direktiven
 	- Diese definieren die autorisierung des versenders
