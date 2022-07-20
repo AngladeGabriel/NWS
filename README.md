@@ -67,12 +67,11 @@
 	- [Bastion Host](#bastion-host)
 	- [Dual Homed Host](#dual-homed-host)
 		- [Vorteile](#vorteile)
-		- [ALG application level gateway](#alg-application-level-gateway)
 		- [FW Systeme heute](#fw-systeme-heute)
 	- [Sicherheit](#sicherheit-2)
 - [Firewalls II](#firewalls-ii)
 	- [Stateful Packetfilter](#stateful-packetfilter)
-	- [ALG Application Level Gateway](#alg-application-level-gateway-1)
+	- [ALG Application Level Gateway](#alg-application-level-gateway)
 	- [Hybrid FW](#hybrid-fw)
 - [Proxy Server](#proxy-server)
 	- [Implementierung](#implementierung)
@@ -1132,17 +1131,6 @@ Nachteile
 - nur der dual homed host trennt netz vom internet so ist bspw. ein abhören der internen kommunikation möglich falls der host kompromitiert wurde
 - es müssen evtl. leistungseinbußen durch den porentiellen engpass der dual homed host in kauf genommen werden
 
-### ALG application level gateway
-vorteile
-- vollständige analyse des protokolls un anwendung von detektions und filtermechanismen
-- einfache integration in fw möglich (UTM)
-
-nachteile
-- nur wenig protokolle vollständig unterstützt
-- generische proxy funktion nicht viel mehr als NAT
-- anfällig gegenüber protokollschwachstellen analog zum zu schützenden Dienst selbst
-- risiko dass über obige schwachstellen zugriff auf die gesamte fw erfolgen kann
-
 ### FW Systeme heute
 - komfortable Nutzung (über UI)
 - stabile mechanismen für aktualisierung und Hochverfügbarkeit
@@ -1202,6 +1190,7 @@ Vorteile:
 Nachteile:
 - keine Überprüfung der Inhalte/Protokoll sondern lediglich Auswertung der Parameter
 - keine Analyse bei verschlüsselten Protokollen möglich
+
 
 ## ALG Application Level Gateway 
 im OSI auf layer 5 application Layer
