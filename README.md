@@ -1197,7 +1197,7 @@ ist im OSI model auf layer 4 Transport layer
 - Inhalte von dynamischen Protokollen bspw. Passive FTP können für dynamische Paketfilter verwendet werden
 
 Vorteile:
-- dynamische Regeln für dynamische Protokolle zb. MS-SQL, FTP, H.323, SIP
+- dynamische Regeln für dynamische Protokolle zb. MS-SQL, FTP, H.323, SIP  
 Nachteile:
 - keine Überprüfung der Inhalte/Protokoll sondern lediglich Auswertung der Parameter
 - keine Analyse bei verschlüsselten Protokollen möglich
