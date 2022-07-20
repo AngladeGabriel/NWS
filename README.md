@@ -1209,19 +1209,19 @@ Nachteile
 - Rikito dass über obige Schwachstellen Zugriff auf die gesamte FW eroflgen kann
 
 ## Hybrid FW
-sind in OSI auf Layer 3 - 5, Network, Transport und Application Layer
-Layer 3
+sind in OSI auf Layer 3 - 5, Network, Transport und Application Layer  
+**Layer 3**
 - Für protokolle die ein geringes Sicherheitsrisiko beinhalten
 - es reicht eine einfach Paket filter Funktion
 - beschleunigt den Datendurchsatz erheblich
 
-Layer 4
+**Layer 4**
 - Für Protokolle wie HTTP oder SMTP, bei denen ein hohes Datenvolumen vorausgesetzt wird
 - stateful inspection technologie
 - für zusätzliche Sicherheit müssen/sollen Schnittstellen zu AntiVirus- /Contentfiltering programmen geschaffen werden
 - einsatz ist verbindungsorientiert und erhöt somit die Durchsatzgeschwindigkeit
 
-Layer 5
+**Layer 5**
 - für kritische Protokolle wird die Application level proxy technologie benutzt
 - bietet den höschten sicherheitsschutz 
 - ist langsam
