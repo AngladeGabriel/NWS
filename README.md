@@ -1476,13 +1476,13 @@ Technologien:
 	- ip wird in ip eingebettet
 
 Beispiel:
-![side2side](img/proxy-side-to-side.png)
+![side2side](proxy-site-to-side.png)
 
 ISDN | PPP | IP-Hdr | UDP | L2TP | PPP | IP-Hdr | Data |
 |					Träger					|		Tunnel	 | 	Passagier		 |
 
 
-![side2side](img/proxy-side-to-side2.png)
+![side2side](img/proxy-site-to-side2.png)
 
 **AH and ESP**
 - AH auth header 
