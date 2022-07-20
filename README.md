@@ -1062,11 +1062,11 @@ Was kann FW nicht:
 
 ## Paketfilter Technologie
 Paketfilter befinden sich im OSI Modell auf Layer 3 und 4 (Network und Transport Layer)
-	- hier findet Überprüfung der Sende und Empfangsadresse statt
-	-	überprüfung der protokollart
-	- des protokoll ports
-	- der benutzerspzifischen Bitmaske
- 
+- hier findet Überprüfung der Sende und Empfangsadresse statt
+	- überprüfung der protokollart
+- des protokoll ports
+- der benutzerspzifischen Bitmaske
+
 - Steuert selektiv den Datenfluss von und zu einem Netz
 - Lässt Pakete zwischen zwei Netzen passieren oder blockiert sie
 - ein vorher aufgestelltes Regelwerk, die Access Control List ACL selektiert die Pakete
