@@ -80,6 +80,7 @@
 	- [OpenVPN](#openvpn)
 - [E-Mail Sicherheit](#e-mail-sicherheit)
 - [E-Mail Sicherheit II](#e-mail-sicherheit-ii)
+	- [# ENDE KLAUSUR-RELEVANZ](#-ende-klausur-relevanz)
 - [Advanced Security Technologies](#advanced-security-technologies)
 	- [Vuln Management](#vuln-management)
 
@@ -1676,6 +1677,11 @@ Emails stellen auch heute das risiko #1 für angriffe dar wesewegen es strukture
 - email gateway mit verschl funktion nutzen 
 	- alle ausgehenden mails signieren
 - ende zu ende verschl von emails um das max an sicherheit bei der kommunikation zu erreichen
+
+
+----------------------------------------------------------------------------------------------------
+# ENDE KLAUSUR-RELEVANZ
+----------------------------------------------------------------------------------------------------
 
 # Advanced Security Technologies
 ## Vuln Management
